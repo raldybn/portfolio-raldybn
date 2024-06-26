@@ -1,7 +1,15 @@
-const smartphone = document.querySelector("#smartphone");
+const profileTab = document.getElementById("profile-tab");
 
-document.addEventListener("click", function (e) {
-  if (!smartphone.contains(e.target) && !socialNavigate.contains(e.target)) {
-    socialNavigate.classList.remove("active");
-  }
-});
+
+
+document.getElementById("profile-img").onclick = () => {
+  profileTab.classList.toggle("active");
+};
+
+// const pp = document.getElementById("profile-img");
+
+// document.addEventListener("click", function (e) {
+//   if (!profile.contains(e.target) && !pp.contains(e.target)) {
+//     profile.classList.remove("active");
+//   }
+// });
