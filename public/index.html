@@ -11,394 +11,289 @@
 
 
 <body class="bg-white">
-  <header class= "top-0 left-0 w-full fixed z-50 border-b-black">
-    <nav x-data="{ isOpen: false }" class="bg-gradient-to-r from-indigo-500 from-10% bg-purple-300-500 via-30% to-primary to-90%">
-      <div class="container px-6 py-4 mx-auto">
-          <div class="lg:flex lg:items-center">
-              <div class="flex items-center justify-between">
-                  <a href="#" class="flex justify-center items-center">
-                      <img class="w-auto h-6 sm:h-7" src="/public/img/logo.png" alt="">
-                      <h1 class="text-3xl font-bold font-sans text-primary">Gloket</h1>
-                  </a>
-  
-                  <!-- Mobile menu button -->
-                  <div class="flex lg:hidden">
-                      <button x-cloak @click="isOpen = !isOpen" type="button" id="hamburger" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
-                          <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg"  class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-                          </svg>
-                  
-                          <!-- <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                          </svg> -->
-                      </button>
-                  </div>
-              </div>
-  
-              <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between">
-                  <div class="flex flex-col text-black font-b capitalize top: 75px; dark:text-white lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
-                      <a href="#" class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 font-bold hover:text-orange dark:hover:text-gray-400">Find Your Job</a>
-                      <a href="#" class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 font-bold hover:text-orange dark:hover:text-gray-400">Workshop</a>
-                      <a href="#" class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 font-bold hover:text-orange dark:hover:text-gray-400">Event</a>
-                      <a href="#" class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 font-bold hover:text-orange dark:hover:text-gray-400">Support</a>
-                      <a href="#" class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 font-bold hover:text-orange dark:hover:text-gray-400">Help</a>
-      
-                      <div class="relative mt-4 lg:mt-0 lg:mx-4">
-                          <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-                              <svg class="w-4 h-4 text-gray-600 dark:text-gray-300" viewBox="0 0 24 24" fill="none">
-                                  <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg>
-                          </span>
-      
-                          <input type="text" class="rounded-md w-full h-8 py-1 pl-10 pr-4 text-gray-700 placeholder-gray-600 bg-white border-b border-gray-600 dark:placeholder-gray-300 dark:focus:border-gray-300 lg:w-56 lg:border-transparent dark:bg-gray-800 dark:text-gray-300 focus:outline-none focus:border-gray-600" placeholder="Search">
-                      </div>
-                  </div>
-      
-                  <div class="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
-                      <a href="#" class="mx-2 text-white transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit">
-                          <i data-feather="Facebook"></i>
-                      </a>
-                      <a href="#" class="mx-2 text-white transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Facebook">
-                          <i data-feather="instagram" ></i>
-                      </a>
-          
-                      <a href="#" class="mx-2 text-white transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Github">
-                          <i data-feather="twitter" ></i>
-                      </a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </nav>
-  </header>
-  <section id="home" class="pt-36 pb-36 bg-gradient-to-r from-indigo-500 from-10% bg-purple-300-500 via-30% to-primary to-90%">
-  
-    <div class="container m-auto rounded-2xl w-11/12 mt-56 lg:flex lg:mt-5 lg:w-full flex-wrap justify-around bg-white">
-      <div class="flex flex-wrap lg:w-1/3">
-        <!-- <div class="flex ">
-          <h1 class="p-1 rounded-l-2xl bg-white border-solid border-2 border-dark-600 " >🔎</h1>
-          <input class="h-6 w-3/12 p-4 rounded-r-2xl border-solid border-2 border-dark-600  " name="search" type="search" placeholder="Search">
-        </div> -->
-        <div class="w-full self-center px-4">
-          <h1 class=" mb-4 text-2xl text-orange font-bold">SELAMAT DATANG DI <span class="text-primary font-bold text-4xl"> Gloket</span></h1>
-          <h2 class="text-sm font-medium text-blue mb-5" >Temukan pekerjaan atau karyawan yang cocok dengan anda disini.</h2>
-          <p class=" text-xs font-medium text-blue mb-10 leading-relaxed">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda odit quia nesciunt ratione quas! Maiores est reprehenderit, molestiae tempora dolorum adipisci eveniet placeat voluptatibus, mollitia officia delectus quam culpa aut?</p>
-          <!-- <a href="#" class="bg-primary py-3 px-4 rounded-full hover:shadow-lg hover:opacity-85 transition duration-300 ease-in-out">Cari Disini</a> -->
+  <header class="bg-transparent absolute top-0 left-0 w-full flex items-center justify-center z-10 transition duration-300 ease-in-out">
+    <div class="container">
+      <div class="flex items-center justify-between relative">
+        <div class="px-4">
+          <a href="#home" class="font-bold lg:text-4xl text-black-400 block py-6">PENGANGGURAN</a>
         </div>
-        <!-- <span class="absolute -z-10 left-1/2 -translate-x-1/2">
-          <svg width="400"  height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#8A3FFC" d="M36.7,-55.7C50.9,-55.2,68.3,-52.3,78.2,-42.7C88.1,-33,90.5,-16.5,86,-2.6C81.5,11.3,70,22.5,61.6,34.8C53.2,47.1,47.9,60.5,38.2,63.7C28.4,66.8,14.2,59.8,2.7,55.2C-8.9,50.5,-17.7,48.3,-29.8,46.4C-41.9,44.6,-57.2,43.3,-62.8,35.6C-68.3,27.9,-64.1,14,-60.2,2.3C-56.2,-9.5,-52.7,-18.9,-50.8,-32.9C-48.9,-46.8,-48.6,-65.2,-40.4,-69.2C-32.2,-73.3,-16.1,-62.8,-2.5,-58.6C11.2,-54.3,22.4,-56.2,36.7,-55.7Z" transform="translate(100 100) scale(1,2)" />
-          </svg>
-        </span> -->
-      </div>
-      
-        <div class="w-full self-end px-4 mt-8 lg:w-1/3">
-        <div class= "mt-10  pb-4 lg:max-w-full lg:mx-auto mb-16">
-          <img src="/public/img/jabat.jpg" alt="hero gambar" class="">
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="mt-12">
-    <div class="bg-white flex self-stretch">
-      <div class="flex flex-col h-full sticky top-1/4 p-3 w-60 dark:bg-gray-50 dark:text-gray-800">
-        <div class="space-y-3">
-          <div class="flex items-center justify-between">
-            <h2 class="rounded-xl bg-orange w-full p-5 font-bold" >DASHBOARD</h2>
-            <!-- <button class="p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-800">
-                <rect width="352" height="32" x="80" y="96"></rect>
-                <rect width="352" height="32" x="80" y="240"></rect>
-                <rect width="352" height="32" x="80" y="384"></rect>
-              </svg>
-            </button> -->
-          </div>
-          
-          <div class="flex-1">
-            <ul class="pt-2 pb-4 space-y-1 text-sm">
-              <li class="rounded-sm">
-                <a rel="noopener noreferrer" href="#" class="flex items-center p-2 space-x-3 rounded-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-600">
-                    <path d="M469.666,216.45,271.078,33.749a34,34,0,0,0-47.062.98L41.373,217.373,32,226.745V496H208V328h96V496H480V225.958ZM248.038,56.771c.282,0,.108.061-.013.18C247.9,56.832,247.756,56.771,248.038,56.771ZM448,464H336V328a32,32,0,0,0-32-32H208a32,32,0,0,0-32,32V464H64V240L248.038,57.356c.013-.012.014-.023.024-.035L448,240Z"></path>
-                  </svg>
-                  <span>Home</span>
-                </a>
+        <div class="flex items-center px-4">
+          <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+          </button>
+
+          <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg  w-auto right-4 left-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none  lg: rounded-none">
+            <ul class="block lg:flex ">
+              <li class="group">
+                <a href="#home" class="text-base text-black font-bold py-2 mx-8 flex  group-hover:text-yellow-500">Beranda</a>
               </li>
-              <li class="rounded-sm">
-                <a rel="noopener noreferrer" href="#" class="flex items-center p-2 space-x-3 rounded-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-600">
-                    <path d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z"></path>
-                  </svg>
-                  <span>Find</span>
-                </a>
+              <li class="group">
+                <a href="#loker" class="text-base text-black font-bold py-2 mx-8 flex group-hover:text-yellow-500">Loker</a>
               </li>
-              <li class="rounded-sm">
-                <a rel="noopener noreferrer" href="#" class="flex items-center p-2 space-x-3 rounded-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-600">
-                    <path d="M448.205,392.507c30.519-27.2,47.8-63.455,47.8-101.078,0-39.984-18.718-77.378-52.707-105.3C410.218,158.963,366.432,144,320,144s-90.218,14.963-123.293,42.131C162.718,214.051,144,251.445,144,291.429s18.718,77.378,52.707,105.3c33.075,27.168,76.861,42.13,123.293,42.13,6.187,0,12.412-.273,18.585-.816l10.546,9.141A199.849,199.849,0,0,0,480,496h16V461.943l-4.686-4.685A199.17,199.17,0,0,1,448.205,392.507ZM370.089,423l-21.161-18.341-7.056.865A180.275,180.275,0,0,1,320,406.857c-79.4,0-144-51.781-144-115.428S240.6,176,320,176s144,51.781,144,115.429c0,31.71-15.82,61.314-44.546,83.358l-9.215,7.071,4.252,12.035a231.287,231.287,0,0,0,37.882,67.817A167.839,167.839,0,0,1,370.089,423Z"></path>
-                    <path d="M60.185,317.476a220.491,220.491,0,0,0,34.808-63.023l4.22-11.975-9.207-7.066C62.918,214.626,48,186.728,48,156.857,48,96.833,109.009,48,184,48c55.168,0,102.767,26.43,124.077,64.3,3.957-.192,7.931-.3,11.923-.3q12.027,0,23.834,1.167c-8.235-21.335-22.537-40.811-42.2-56.961C270.072,30.279,228.3,16,184,16S97.928,30.279,66.364,56.206C33.886,82.885,16,118.63,16,156.857c0,35.8,16.352,70.295,45.25,96.243a188.4,188.4,0,0,1-40.563,60.729L16,318.515V352H32a190.643,190.643,0,0,0,85.231-20.125,157.3,157.3,0,0,1-5.071-33.645A158.729,158.729,0,0,1,60.185,317.476Z"></path>
-                  </svg>
-                  <span>Chat</span>
-                </a>
+              <li class="group">
+                <a href="#events" class="text-base text-black font-bold py-2 mx-8 flex group-hover:text-yellow-500">Event</a>
               </li>
-              <li class="rounded-sm">
-                <a rel="noopener noreferrer" href="#" class="flex items-center p-2 space-x-3 rounded-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-600">
-                    <path d="M203.247,386.414,208,381.185V355.4L130.125,191H93.875L16,355.4v27.042l4.234,4.595a124.347,124.347,0,0,0,91.224,39.982h.42A124.343,124.343,0,0,0,203.247,386.414ZM176,368.608a90.924,90.924,0,0,1-64.231,26.413h-.33A90.907,90.907,0,0,1,48,369.667V362.6l64-135.112L176,362.6Z"></path>
-                    <path d="M418.125,191h-36.25L304,355.4v27.042l4.234,4.595a124.347,124.347,0,0,0,91.224,39.982h.42a124.343,124.343,0,0,0,91.369-40.607L496,381.185V355.4ZM464,368.608a90.924,90.924,0,0,1-64.231,26.413h-.33A90.907,90.907,0,0,1,336,369.667V362.6l64-135.112L464,362.6Z"></path>
-                    <path d="M272,196.659A56.223,56.223,0,0,0,309.659,159H416V127H309.659a55.991,55.991,0,0,0-107.318,0H96v32H202.341A56.223,56.223,0,0,0,240,196.659V463H136v32H376V463H272ZM232,143a24,24,0,1,1,24,24A24,24,0,0,1,232,143Z"></path>
-                  </svg>
-                  <span>Your CV</span>
-                </a>
+              <li class="group">
+                <a href="#jobfair" class="text-base text-black font-bold py-2 mx-8 flex group-hover:text-yellow-500">Job Fair</a>
               </li>
-              <li class="rounded-sm dark:bg-gray-100 dark:text-gray-900">
-                <a rel="noopener noreferrer" href="#" class="flex items-center p-2 space-x-3 rounded-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-600">
-                    <path d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z"></path>
-                  </svg>
-                  <span>Favorites</span>
-                </a>
-              </li>
-              <li class="rounded-sm">
-                <a rel="noopener noreferrer" href="#" class="flex items-center p-2 space-x-3 rounded-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-600">
-                    <path d="M245.151,168a88,88,0,1,0,88,88A88.1,88.1,0,0,0,245.151,168Zm0,144a56,56,0,1,1,56-56A56.063,56.063,0,0,1,245.151,312Z"></path>
-                    <path d="M464.7,322.319l-31.77-26.153a193.081,193.081,0,0,0,0-80.332l31.77-26.153a19.941,19.941,0,0,0,4.606-25.439l-32.612-56.483a19.936,19.936,0,0,0-24.337-8.73l-38.561,14.447a192.038,192.038,0,0,0-69.54-40.192L297.49,32.713A19.936,19.936,0,0,0,277.762,16H212.54a19.937,19.937,0,0,0-19.728,16.712L186.05,73.284a192.03,192.03,0,0,0-69.54,40.192L77.945,99.027a19.937,19.937,0,0,0-24.334,8.731L21,164.245a19.94,19.94,0,0,0,4.61,25.438l31.767,26.151a193.081,193.081,0,0,0,0,80.332l-31.77,26.153A19.942,19.942,0,0,0,21,347.758l32.612,56.483a19.937,19.937,0,0,0,24.337,8.73l38.562-14.447a192.03,192.03,0,0,0,69.54,40.192l6.762,40.571A19.937,19.937,0,0,0,212.54,496h65.222a19.936,19.936,0,0,0,19.728-16.712l6.763-40.572a192.038,192.038,0,0,0,69.54-40.192l38.564,14.449a19.938,19.938,0,0,0,24.334-8.731L469.3,347.755A19.939,19.939,0,0,0,464.7,322.319Zm-50.636,57.12-48.109-18.024-7.285,7.334a159.955,159.955,0,0,1-72.625,41.973l-10,2.636L267.6,464h-44.89l-8.442-50.642-10-2.636a159.955,159.955,0,0,1-72.625-41.973l-7.285-7.334L76.241,379.439,53.8,340.562l39.629-32.624-2.7-9.973a160.9,160.9,0,0,1,0-83.93l2.7-9.972L53.8,171.439l22.446-38.878,48.109,18.024,7.285-7.334a159.955,159.955,0,0,1,72.625-41.973l10-2.636L222.706,48H267.6l8.442,50.642,10,2.636a159.955,159.955,0,0,1,72.625,41.973l7.285,7.334,48.109-18.024,22.447,38.877-39.629,32.625,2.7,9.972a160.9,160.9,0,0,1,0,83.93l-2.7,9.973,39.629,32.623Z"></path>
-                  </svg>
-                  <span>Settings</span>
-                </a>
-              </li>
-              <li class="rounded-sm">
-                <a rel="noopener noreferrer" href="#" class="flex items-center p-2 space-x-3 rounded-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-600">
-                    <path d="M440,424V88H352V13.005L88,58.522V424H16v32h86.9L352,490.358V120h56V456h88V424ZM320,453.642,120,426.056V85.478L320,51Z"></path>
-                    <rect width="32" height="64" x="256" y="232"></rect>
-                  </svg>
-                  <span>Logout</span>
-                </a>
+              <li class="group">
+                <a href="#contact" class="text-base text-black font-bold py-2 mx-8 flex group-hover:text-yellow-500">Kontak Kami</a>
               </li>
             </ul>
-          </div>
-        </div>
-        <div class="flex items-center p-2 mt-12 space-x-4 justify-self-end">
-          <img src="/public/img/profile.JPG" alt="" class="w-12 h-12 rounded-lg dark:bg-gray-500">
-          <div>
-            <h2 class="text-lg font-semibold">RaldyBN</h2>
-            <span class="flex items-center space-x-1">
-              <a rel="noopener noreferrer" href="#" class="text-xs hover:underline dark:text-gray-600">View profile</a>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 class="sr-only">Products</h2>
-        <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-          <a href="#" class="group">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-              <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
-            </div>
-            <h3 class="mt-4 text-sm text-gray-700">UI / UX Design</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">Bandung, Jawa Barat</p>
-          </a>
-          <a href="#" class="group">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-              <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-            </div>
-            <h3 class="mt-4 text-sm text-gray-700">Digital Marketing</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">Jakarta Selatan, DKI Jakarta</p>
-          </a>
-          <a href="#" class="group">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-              <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
-            </div>
-            <h3 class="mt-4 text-sm text-gray-700">Barista - Full Time</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">Depok, Jawa Barat</p>
-          </a>
-          <a href="#" class="group">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-              <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-            </div>
-            <h3 class="mt-4 text-sm text-gray-700">Biomedic Mechanic</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">Jakarta Barat, DKI Jakarta</p>
-          </a>
-          <a href="#" class="group">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-              <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
-            </div>
-            <h3 class="mt-4 text-sm text-gray-700">SPV Restaurant</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">Jakarta Utara, DKI Jakarta</p>
-          </a>
-          <a href="#" class="group">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-              <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-            </div>
-            <h3 class="mt-4 text-sm text-gray-700">English Teacher</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">Bandung, Jawa Barat</p>
-          </a>
-          <a href="#" class="group">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-              <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
-            </div>
-            <h3 class="mt-4 text-sm text-gray-700">Security</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">Jakarta Timur, DKI Jakarta</p>
-          </a>
-          <a href="#" class="group">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-              <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-            </div>
-            <h3 class="mt-4 text-sm text-gray-700">Costumer Service</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">Jakarta Pusat, DKI Jakarta</p>
-          </a>
-          <a href="#" class="group">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-              <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
-            </div>
-            <h3 class="mt-4 text-sm text-gray-700">Plumber</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">Tangerang Selatan, Banten</p>
-          </a>
-          <a href="#" class="group">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-              <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-            </div>
-            <h3 class="mt-4 text-sm text-gray-700">Driver</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">Jakarta Timur, DKI Jakarta</p>
-          </a>
-          <a href="#" class="group">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-              <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
-            </div>
-            <h3 class="mt-4 text-sm text-gray-700">Tour Guide</h3>
-            <p class="mt-1 text-lg font-medium text-gray-900">Canggu, Bali</p>
-          </a>
-          <!-- More products... -->
+          </nav>
         </div>
       </div>
     </div>
-  </section>
-  <section class="text-gray-600 body-font">
-    <div class="container px-5 py-24 mx-auto flex flex-wrap">
-      <div class="flex w-full mb-20 flex-wrap">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Master Cleanse Reliac Heirloom</h1>
-        <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
-      </div>
-      <div class="flex flex-wrap md:-m-2 -m-1">
-        <div class="flex flex-wrap w-1/2">
-          <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="/public/img/hardware.jpg">
-          </div>
-          <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="/public/img/coffee.jpg">
-          </div>
-          <div class="md:p-2 p-1 w-full">
-            <img alt="gallery" class="w-full h-full object-cover object-center block" src="/public/img/meeting.jpg">
+  </header>
+
+
+  <!-- HOME START -->
+  <section id="home" class="pt-36 sm:h-screen lg:h-full pb-32 bg-gradient-to-l from-indigo-600">
+    <div class="container px-10">
+      <div class="flex flex-wrap">
+        <div class=" grid gap-8 lg:flex lg:items-center lg:gap-8">
+          <img src="/public/img/jobs/work-6.jpg" alt="" class="rounded-full md:h-auto md:w-2/4">
+          <div class="grid">
+            <h1 class="text-2xl py-7 lg:text-3xl lg:p-4 font-bold">Welcome To <span class="text-white"> Pengangguran </span> </h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet explicabo sed nesciunt consequuntur quae est adipisci perspiciatis enim omnis quo dolor ab sequi, officiis ipsum et reiciendis voluptatibus dicta maxime.</p>
+            <a href="login" class="py-4 px-2 bg-slate-200 shadow-sm text-sm lg:w-1/3 rounded text-center font-bold mt-4 hover:bg-yellow-500 transition duration-150 hover:shadow-2xl">Find my Job now!</a>
           </div>
         </div>
-        <div class="flex flex-wrap w-1/2">
-          <div class="md:p-2 p-1 w-full">
-            <img alt="gallery" class="w-full h-full object-cover object-center block" src="/public/img/fireman.jpg">
-          </div>
-          <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="/public/img/kitchen.jpg">
-          </div>
-          <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="/public/img/bartender.jpg">
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
-  <section>
-    
-  </section>
-  <footer class="bg-gray-50 dark:bg-gray-900">
-    <div class="container p-6 mx-auto">
-        <div class="lg:flex">
-            <div class="w-full -mx-6 lg:w-2/5">
-                <div class="px-6">
-                    <a href="#" class="flex items-center">
-                        <img class="w-auto h-7" src="/public/img/logo.png" alt="">
-                        <h1 class="font-bold">PENGANGGURAN</h1>
-                    </a>
+  <!-- HOME END -->
+   <!-- PROTFOLIO START -->
+  <section id="portfolio" class="pt-12 pb-32">
+    <div  class="bg-white">
+          <div class="container mx-auto px-6 py-3">
+              <div class="flex items-center justify-between">
+                  <div class="w-full text-gray-700 md:text-center justify-center text-2xl font-semibold">
+                     JOB SEEKER
+                  </div>
+              </div>
+              <nav class="sm:flex sm:justify-center sm:items-center mt-4">
+                  <div class="flex justify-center gap-6 sm:flex-row">
+                      <a class="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">Programmer</a>
+                      <a class="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">F & B Service</a>
+                      <a class="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">Accountant & Administration</a>
+                      <a class="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">Teacher</a>
+                      <a class="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">Driver</a>
+                  </div>
+              </nav>
+              <div class="relative mt-6 max-w-lg mx-auto">
+              <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                  <svg class="h-5 w-5 text-gray-500" viewBox="0 0 24 24" fill="none">
+                      <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </span>
+                  <input class="w-full border rounded-md pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:shadow-outline" type="text" placeholder="What you wanted?">
+              </div>
+          </div>
 
-                    <p class="max-w-sm mt-2 text-gray-500 dark:text-gray-400">Join 31,000+ other and never miss out on new tips, tutorials, and more.</p>
-
-                    <div class="flex mt-6 -mx-2">
-                        <a href="#"
-                            class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
-                            aria-label="Reddit">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
-                                </path>
-                            </svg>
-                        </a>
-                    
-                        <a href="#"
-                            class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
-                            aria-label="Facebook">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
-                                </path>
-                            </svg>
-                        </a>
-                    
-                        <a href="#"
-                            class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
-                            aria-label="Github">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
+      <!-- CARD -->
+          <div class="flex flex-wrap place-content-around">
+            <div class="card">
+              <a href="">
+                <img src="/public/img/jobs/work-3.jpg" alt="" class="card-img">
+                <h1 class="card-h1">Translator</h1>
+                <h2>PT. Nur Makmur Alhamdulillah</h2>
+                <div class="card-desc">
+                  <i data-feather="briefcase" class="card-icon"></i>
+                  <p>Paruh Waktu</p>
                 </div>
-            </div>
-
-            <div class="mt-6 lg:mt-0 lg:flex-1">
-                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                    <div>
-                        <h3 class="text-gray-700 uppercase font-bold dark:text-white">About</h3>
-                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Company</a>
-                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">community</a>
-                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Careers</a>
-                    </div>
-
-                    <div>
-                        <h3 class="text-gray-700 uppercase font-bold dark:text-white">Blog</h3>
-                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Tec</a>
-                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Music</a>
-                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Videos</a>
-                    </div>
-
-                    <div>
-                        <h3 class="text-gray-700 uppercase font-bold dark:text-white">Products</h3>
-                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Mega cloud</a>
-                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Aperion UI</a>
-                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Meraki UI</a>
-                    </div>
-
-                    <div>
-                        <h3 class="text-gray-700 uppercase font-bold dark:text-white">Contact</h3>
-                        <span class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">+1 526 654 8965</span>
-                        <span class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">example@email.com</span>
-                    </div>
+                <div class="card-desc">
+                <i data-feather="dollar-sign" class="card-icon"></i>
+                <p>Rp. 4.500.000 - 8.000.000</p>
                 </div>
+                <div class="card-desc">
+                  <i data-feather="map-pin" class="card-icon"></i>
+                  <p>Jakarta Selatan</p>
+                </div>
+                <p class="card-p">Deadline 1 Maret 2024 - 2 Agustus 2024</p>
+              </a>
             </div>
-        </div>
+            <div class="card">
+              <a href="">
+                <img src="/public/img/jobs/work-3.jpg" alt="" class="card-img">
+                <h1 class="card-h1">Translator</h1>
+                <h2>PT. Nur Makmur Alhamdulillah</h2>
+                <div class="card-desc">
+                  <i data-feather="briefcase" class="card-icon"></i>
+                  <p>Paruh Waktu</p>
+                </div>
+                <div class="card-desc">
+                <i data-feather="dollar-sign" class="card-icon"></i>
+                <p>Rp. 4.500.000 - 8.000.000</p>
+                </div>
+                <div class="card-desc">
+                  <i data-feather="map-pin" class="card-icon"></i>
+                  <p>Jakarta Selatan</p>
+                </div>
+                <p class="card-p">Deadline 1 Maret 2024 - 2 Agustus 2024</p>
+              </a>
+            </div>
+            <div class="card">
+              <a href="">
+                <img src="/public/img/jobs/work-3.jpg" alt="" class="card-img">
+                <h1 class="card-h1">Translator</h1>
+                <h2>PT. Nur Makmur Alhamdulillah</h2>
+                <div class="card-desc">
+                  <i data-feather="briefcase" class="card-icon"></i>
+                  <p>Paruh Waktu</p>
+                </div>
+                <div class="card-desc">
+                <i data-feather="dollar-sign" class="card-icon"></i>
+                <p>Rp. 4.500.000 - 8.000.000</p>
+                </div>
+                <div class="card-desc">
+                  <i data-feather="map-pin" class="card-icon"></i>
+                  <p>Jakarta Selatan</p>
+                </div>
+                <p class="card-p">Deadline 1 Maret 2024 - 2 Agustus 2024</p>
+              </a>
+            </div>
+            <div class="card">
+              <a href="">
+                <img src="/public/img/jobs/work-3.jpg" alt="" class="card-img">
+                <h1 class="card-h1">Translator</h1>
+                <h2>PT. Nur Makmur Alhamdulillah</h2>
+                <div class="card-desc">
+                  <i data-feather="briefcase" class="card-icon"></i>
+                  <p>Paruh Waktu</p>
+                </div>
+                <div class="card-desc">
+                <i data-feather="dollar-sign" class="card-icon"></i>
+                <p>Rp. 4.500.000 - 8.000.000</p>
+                </div>
+                <div class="card-desc">
+                  <i data-feather="map-pin" class="card-icon"></i>
+                  <p>Jakarta Selatan</p>
+                </div>
+                <p class="card-p">Deadline 1 Maret 2024 - 2 Agustus 2024</p>
+              </a>
+            </div>
+            <div class="card">
+              <a href="">
+                <img src="/public/img/jobs/work-3.jpg" alt="" class="card-img">
+                <h1 class="card-h1">Translator</h1>
+                <h2>PT. Nur Makmur Alhamdulillah</h2>
+                <div class="card-desc">
+                  <i data-feather="briefcase" class="card-icon"></i>
+                  <p>Paruh Waktu</p>
+                </div>
+                <div class="card-desc">
+                <i data-feather="dollar-sign" class="card-icon"></i>
+                <p>Rp. 4.500.000 - 8.000.000</p>
+                </div>
+                <div class="card-desc">
+                  <i data-feather="map-pin" class="card-icon"></i>
+                  <p>Jakarta Selatan</p>
+                </div>
+                <p class="card-p">Deadline 1 Maret 2024 - 2 Agustus 2024</p>
+              </a>
+            </div>
+            <div class="card">
+              <a href="">
+                <img src="/public/img/jobs/work-3.jpg" alt="" class="card-img">
+                <h1 class="card-h1">Translator</h1>
+                <h2>PT. Nur Makmur Alhamdulillah</h2>
+                <div class="card-desc">
+                  <i data-feather="briefcase" class="card-icon"></i>
+                  <p>Paruh Waktu</p>
+                </div>
+                <div class="card-desc">
+                <i data-feather="dollar-sign" class="card-icon"></i>
+                <p>Rp. 4.500.000 - 8.000.000</p>
+                </div>
+                <div class="card-desc">
+                  <i data-feather="map-pin" class="card-icon"></i>
+                  <p>Jakarta Selatan</p>
+                </div>
+                <p class="card-p">Deadline 1 Maret 2024 - 2 Agustus 2024</p>
+              </a>
+            </div>
+            <div class="card">
+              <a href="">
+                <img src="/public/img/jobs/work-3.jpg" alt="" class="card-img">
+                <h1 class="card-h1">Translator</h1>
+                <h2>PT. Nur Makmur Alhamdulillah</h2>
+                <div class="card-desc">
+                  <i data-feather="briefcase" class="card-icon"></i>
+                  <p>Paruh Waktu</p>
+                </div>
+                <div class="card-desc">
+                <i data-feather="dollar-sign" class="card-icon"></i>
+                <p>Rp. 4.500.000 - 8.000.000</p>
+                </div>
+                <div class="card-desc">
+                  <i data-feather="map-pin" class="card-icon"></i>
+                  <p>Jakarta Selatan</p>
+                </div>
+                <p class="card-p">Deadline 1 Maret 2024 - 2 Agustus 2024</p>
+              </a>
+            </div>
+            <div class="card">
+              <a href="">
+                <img src="/public/img/jobs/work-3.jpg" alt="" class="card-img">
+                <h1 class="card-h1">Translator</h1>
+                <h2>PT. Nur Makmur Alhamdulillah</h2>
+                <div class="card-desc">
+                  <i data-feather="briefcase" class="card-icon"></i>
+                  <p>Paruh Waktu</p>
+                </div>
+                <div class="card-desc">
+                <i data-feather="dollar-sign" class="card-icon"></i>
+                <p>Rp. 4.500.000 - 8.000.000</p>
+                </div>
+                <div class="card-desc">
+                  <i data-feather="map-pin" class="card-icon"></i>
+                  <p>Jakarta Selatan</p>
+                </div>
+                <p class="card-p">Deadline 1 Maret 2024 - 2 Agustus 2024</p>
+              </a>
+            </div>
+          </div>
+      <!-- CARD -->
+  </section>
+  <!-- PROTFOLIO END--> 
 
-        <hr class="h-px my-6 bg-gray-200 border-none dark:bg-gray-700">
+  <!-- CONTACT START -->
+  <section id="contact" class="pt-36 pb-32">
+  </section>
+  <!-- CONTACT END -->
 
-        <div>
-            <p class="text-center text-gray-500 dark:text-gray-400">© Pengangguran 2024 - All rights reserved</p>
-        </div>
-    </div>
+  <!-- ABOUT START -->
+  <section id="about" class="pt-36 pb-32">
+  </section>
+  <!-- ABOUT START -->
+
+  <footer class="lg:flex justify-around items-baseline w-full lg:h-96 h-full py-8 px-4 bg-yellow-400 bottom-0 left-0 right-0">
+  <a href="#" class="mt-8 ml-5 lg:text-5xl font-bold">PENGANGGURAN</a>
+
+  <div class="grid gap-4 content-center">
+    <h1 class="font-bold">Link :</h1>
+    <ul class=" pl-7"> 
+      <a href="#"><li class="p-1 list-disc"> Magang di luar negeri</li></a>
+      <a href="#"><li class="p-1 list-disc"> Event</li></a>
+      <a href="#"><li class="p-1 list-disc"> Job Fair</li></a>
+    </ul>
+  </div>
+  <div class="grid content-center gap-4">
+    <h1 class="font-bold text-2xl">CopyRight & License</h1>
+    <a href="" class="text-1xl">CopyRight Pengangguran 2024</a>
+  </div>
   </footer>
+
   
+
+  <script src="/dist/js/script.js"></script>
   <script>
     feather.replace();
   </script>
-  <script src="/dst/js/script.js"></script>
+  
 </body>
 </html>
