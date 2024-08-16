@@ -1653,6 +1653,10 @@ video {
   font-weight: 100;
 }
 
+.font-extralight {
+  font-weight: 200;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
