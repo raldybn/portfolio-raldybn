@@ -1081,6 +1081,10 @@ video {
   justify-content: flex-start;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -1148,6 +1152,10 @@ video {
 .divide-gray-100 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-divide-opacity));
+}
+
+.self-end {
+  align-self: flex-end;
 }
 
 .self-center {
@@ -1360,6 +1368,21 @@ video {
   background-color: rgb(250 250 250 / var(--tw-bg-opacity));
 }
 
+.bg-zinc-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+}
+
+.bg-indigo-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
+}
+
+.bg-indigo-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(165 180 252 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-0 {
   --tw-bg-opacity: 0;
 }
@@ -1483,6 +1506,10 @@ video {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-9 {
+  padding: 2.25rem;
 }
 
 .px-3 {
@@ -1787,6 +1814,16 @@ video {
 .text-yellow-600 {
   --tw-text-opacity: 1;
   color: rgb(202 138 4 / var(--tw-text-opacity));
+}
+
+.text-slate-200 {
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity));
+}
+
+.text-yellow-300 {
+  --tw-text-opacity: 1;
+  color: rgb(253 224 71 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2126,8 +2163,17 @@ body {
   border-radius: 0.25rem;
 }
 
+.hover\:border-2:hover {
+  border-width: 2px;
+}
+
 .hover\:border-solid:hover {
   border-style: solid;
+}
+
+.hover\:border-black:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .hover\:bg-gray-100:hover {
@@ -2176,6 +2222,18 @@ body {
 
 .hover\:bg-opacity-25:hover {
   --tw-bg-opacity: 0.25;
+}
+
+.hover\:bg-opacity-70:hover {
+  --tw-bg-opacity: 0.7;
+}
+
+.hover\:bg-opacity-85:hover {
+  --tw-bg-opacity: 0.85;
+}
+
+.hover\:bg-opacity-80:hover {
+  --tw-bg-opacity: 0.8;
 }
 
 .hover\:text-black:hover {
@@ -2757,6 +2815,16 @@ body {
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .lg\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .lg\:text-slate-200 {
