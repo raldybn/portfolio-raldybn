@@ -15,10 +15,8 @@ body {
 }
 
 .hamburger-line {
-    @apply w-[30px] h-[2px] my-2 block bg-yellow-600
+    @apply w-[30px] h-[2px] my-2 block bg-yellow-600;
 }
-
-
 
 .hamburger-active > span:nth-child(1) {
  @apply rotate-45;
@@ -62,4 +60,16 @@ body {
 
 .contact-desc {
     @apply flex gap-2 items-center 
+}
+
+.text-01xl {
+    font-size: 16px;
+    line-height: 1.1rem;
+    padding-top: 6px;
+}
+
+.scale-85 {
+    --tw-scale-x: .85;
+    --tw-scale-y: .85;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
