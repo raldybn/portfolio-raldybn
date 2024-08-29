@@ -11,17 +11,16 @@
 </head>
 
 
-<body class="bg-white">
-  <header class="bg-transparent absolute top-0 left-0 w-full flex items-center justify-center z-10 transition duration-300 ease-in-out">
+  <header class="bg-transparent absolute top-0 left-0 w-full flex items-center justify-center z-10 transition duration-500 ease-in-out">
     <div class="container">
       <div class="flex items-center justify-between relative">
-        <div class="px-4 flex justify-center items-center gap-1 ">
-          <img src="/public/img/logo.png" alt="" class="border-2 border-black rounded-full lg:w-10 w-8">
-         <a href="index.html" class="lg:text-4xl text-2xl text-indigo-500 bg-opacity-50 font-extrabold block p-2 underline decoration-wavy decoration-yellow-500 ">RALDYBN</a>
+        <div class="px-4 py-2 flex justify-center items-center lg:w-max w-full lg:gap-1">
+          <img src="/public/img/logo.png" alt="" class="border-2  border-black rounded-full lg:mt-3 mt-1 lg:w-12 w-10">
+          <a href="index.html" class="lg:text-4xl text-2xl text-white shadow-cost bg-opacity-50 font-extrabold block p-2 underline decoration-wavy decoration-red-500 ">RALDY<span class="text-yellow-500">BN</span> </a>
         </div>
-        <div class="flex items-center px-4">
+        <div class="flex items-center px-4 py-2">
           <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
-            <span class="hamburger-line white transition duration-300 ease-in-out origin-top-left"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
             <span class="hamburger-line transition duration-300 ease-in-out"></span>
             <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
           </button>
@@ -92,7 +91,7 @@
             <p class="font-thin italic text-slate-100">"Hello, my name is Raldy Belo. As a Junior Front-End Web Developer, I focus on developing visually appealing, responsive, and high-performing websites."</p>
             <br>
               <div class="cursor-pointer justify-self-end lg:mt-16 scale-90 drop-shadow-lg outline-8 outline-blue-500/50">
-                <a href="#about">
+                <a href="portfolio.html">
                   <button class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-yellow-600 transition duration-300 ease-out border-2 border-yellow-500 rounded-full shadow-md group">
                 <span class="absolute inset-0 flex items-center justify-center w-full h-full text-slate-900 duration-300 -translate-x-full bg-yellow-500 group-hover:translate-x-0 ease">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -108,8 +107,9 @@
   </section>
   <!-- HOME END -->
     <!-- ABOUT START -->
-  <section id="about" class="lg:mt-16 justify-center items-center">
-    <div  class="bg-white lg:flex p-8">
+    <div id="about" ></div>
+  <section  class="lg:mt-16 justify-center items-center lg:scale-y-100 scale-y-95">
+    <div  class="bg-white lg:flex p-8 ">
       <!-- about -->
       <div
         class="max-w-2xl mx-4 sm:max-w-40 md:max-w-sm lg:h-5/6 lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-white transition duration-300 ease-in-out shadow-xl rounded-lg text-gray-900 hover:shadow-2xl">
@@ -150,13 +150,16 @@
           <a href="https://www.instagram.com/raldybn/" target="_blank"><button class="w-1/2 block mx-auto rounded-full bg-gray-900 hover:shadow-lg font-semibold transition duration-300 ease-in-out text-white lg:px-6 lg:py-2 hover:bg-opacity-25">Follow</button></a>
       </div>
     </div>
-    <div class="lg:w-2/4 w-auto">
-      <h1 class="font-bold text-4xl lg:text-6xl py-8 lg:py-6">About Me</h1>
-      <p class="text-justify font-extralight md:w-auto">
-        <span class="font-extrabold">My Journey into Web Development</span>
-        <br>
-        When I was young, I was fascinated by how websites come to life. What started as a hobby became a passion as I discovered the power of code to transform ideas into reality.
-        As a junior web developer, I bring a fresh perspective and enthusiasm to every project. I'm skilled in HTML, JavaScript, CSS, Tailwind CSS, and PHP, constantly expanding my knowledge. I thrive on challenges and believe collaboration is key to creating exceptional digital experiences.</p>
+    <div class="lg:w-2/4 w-auto ">
+      <div class="lg:scale-y-100 scale-y-95">
+        <h1 class="font-bold text-4xl lg:text-6xl py-8 lg:py-6">About Me</h1>
+        <p class="text-justify font-extralight md:w-auto">
+          <span class="font-extrabold">My Journey into Web Development</span>
+          <br>
+            When I was young, I was fascinated by how websites come to life. What started as a hobby became a passion as I discovered the power of code to transform ideas into reality.
+            As a junior web developer, I bring a fresh perspective and enthusiasm to every project. I'm skilled in HTML, JavaScript, CSS, Tailwind CSS, and PHP, constantly expanding my knowledge. I thrive on challenges and believe collaboration is key to creating exceptional digital experiences.
+          </p>
+        </div>
       <div class="lg:mt-9 mt-5">
         <ul class="text-5xl text-white w-max lg:w-full gap-3 lg:gap-16 flex flex-wrap justify-center">
             <a href="https://www.facebook.com/raldyxs" target="_blank"><li class="flex justify-center items-center p-1 bg-sky-600 hover:shadow-lg hover:opacity-50 transition duration-300 ease-in-out rounded-full mt-2 h-12 w-12">
@@ -181,7 +184,7 @@
       </div>
     </div>
   </section>
-  <section class="text-gray-700 lg:mt-9 body-font">
+  <section class="text-gray-700 lg:mt-9 body-font lg:scale-y-100 scale-y-75">
     <div class="container px-5 mx-auto">
       <div class="flex flex-wrap -m-4 text-center">
         <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
@@ -215,7 +218,7 @@
       </div>
     </div>
   </section>
-  <section class="py-12 md:py-24">
+  <section class="lg:my-40">
     <div class="w-full max-w-6xl rounded bg-black mx-auto pl-0 pr-4 sm:px-6 md:px-8 relative">
         <div class="shadow rounded-xl">
             <div class="grid overflow-hidden text-white shadow-xl md:grid-cols-2 bg-blue-600 rounded-xl">
@@ -241,30 +244,29 @@
         </div>
     </div>
   </section>
-  <section class="bg-zinc-50 overflow-hidden h-full mt-14 mb-14" >
-      <div class="bg-white dark:bg-gray-800 h-full lg:mb-20 py-6 sm:py-8 lg:py-12">
-        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-            <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
-                <div class="flex items-center gap-12" id="gallery">
+  <div id="gallery"></div>
+  <section class=" overflow-hidden h-full mt-14 lg:mt-0 mb-8" >
+      <div class="bg-white dark:bg-gray-800 h-full lg:mb-12 py-6 sm:py-8 ">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8 grid">
+            <div class="flex items-center justify-between mt-12 bg-slate-100 rounded-2xl p-5 gap-8 ">
+                <div class="flex items-center gap-12">
                     <h2 class="text-2xl font-bold text-gray-800 lg:text-3xl dark:text-white">Gallery</h2>
-    
                     <p class="hidden max-w-screen-sm text-gray-500 dark:text-gray-300 md:block">
                       "This gallery highlights my passion for creating visually stunning and user-centric designs."
                     </p>
                 </div>
-    
                 <a href="https://www.instagram.com/raldybn/" target="_blank"
                     class="inline-block rounded-lg border bg-white dark:bg-gray-700 dark:border-none px-4 py-2 text-center text-sm font-semibold text-gray-500 dark:text-gray-200 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base">
                     More
                 </a>
             </div>
     
-            <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8 lg:scale-y-75 scale-y-100 lg:py-4">
                 <!-- image - start -->
                 <a href="#"
                     class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
                     <img src="/public/img/galeri/about.jpg" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-    
+
                     <div
                         class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
                     </div>
@@ -315,7 +317,8 @@
         </div>
       </div>     
   </section>
-  <section  id="music" class="w-full lg:h-full h-max bg-[url('/public/img/spotify.png')] bg-opacity-50 scale-85 rounded-2xl bg-center lg:mb-24 my-12 bg-cover bg-no-repeat lg:pt-0 pt-8">
+  <div id="music"></div>
+  <section class="w-full lg:h-full h-max bg-[url('/public/img/spotify.png')] bg-opacity-50 scale-90 lg:scale-y-75 rounded-2xl bg-center lg:mb-24 mb-12 bg-cover bg-no-repeat lg:pt-0 pt-8">
     <div  class="top-0 bottom-0 grid p-4 justify-center items-center bg-opacity-65 w-full h-max lg:pt-12 pb-12">
       <div class="flex items-center scale-90 lg:scale-100 justify-between lg:px-9 px-3 gap-8 rounded-2xl bg-white w-full  md:mb-8">
         <div class="flex items-center gap-12">
@@ -348,18 +351,18 @@
           </a>
         </div>
       </div>
-      <div class="lg:flex sm:scale-75 lg:scale-105 grid p-8 gap-8 lg:justify-around items-center">
-        <div class="w-full">
+      <div class="lg:flex grid lg:scale-105 lg:p-8 lg:gap-8 lg:justify-around justify-center items-center">
+        <div class="w-full rounded-xl lg:p-8 p-4 items-start bg-white bg-opacity-35 lg:scale-100 scale-90">
           <div class="flex items-center sm:gap-4 p-3 gap-2">
-            <h1 class="sm:text-6xl text-3xl rounded-full font-extrabold text-justify  text-slate-900 w-max bg-green-500 p-2">#1</h1>
-            <h1 class="py-6 sm:px-3 sm:text-5xl text-1xl sm:text-slate-100 text-slate-800 text-justify font-extrabold sm:text-start"> ONLY WANNA BE WITH YOU BY SAMM HENSHAW.</h1>
+            <h1 class="sm:text-6xl text-3xl rounded-full font-extrabold text-justify  text-slate-900 w-max bg-green-500 p-4">#1</h1>
+            <h1 class="py-6 sm:px-3 sm:text-5xl text-2xl  text-slate-800 text-justify font-extrabold sm:text-start"> TILL THERE WAS YOU BY BEATLES (1963).</h1>
           </div>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7ivEZyVKpHlqCKFFUqOYX1?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" class="shadow-lg  hover:shadow-indigo-500"></iframe>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0ESIjVxnDnCDaTPo6sStHm?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" class="shadow-md hover:shadow-green-500"></iframe>
         </div>
-        <div class="lg:flex lg:flex-wrap grid gap-5 lg:w-2/4">
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6WsG550j67Aj29z0iel7lo?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" class="shadow-lg  hover:shadow-indigo-500"></iframe>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Y57iWs9X7krJxQpuFLAjq?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" class="shadow-lg  hover:shadow-indigo-500"></iframe>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0X6urbVPZcWoeb68fTsmV3?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" class="shadow-lg hover:shadow-indigo-500"></iframe>
+        <div class="lg:flex lg:flex-wrap w-full grid gap-5 lg:w-2/4 lg:scale-100 scale-90">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Y57iWs9X7krJxQpuFLAjq?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" class="shadow-md hover:shadow-green-500"></iframe>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6wfK1R6FoLpmUA9lk5ll4T?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" class="shadow-md hover:shadow-green-500"></iframe>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6WsG550j67Aj29z0iel7lo?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" class="shadow-md hover:shadow-green-500"></iframe>
         </div>
       </div>
     </div>
